@@ -33,7 +33,7 @@ export const AuthContext = createContext({} as AuthContext);
 export function AuthProvider({ children }: AuthProvider) {
   const [user, setUser] = useState<User | null>(null);
 
-  const signInUrl = `https://github.com/login/oauth/authorize?scope=user&client_id=9d825cfba4157dcf55e5`;
+  const signInUrl = `https://github.com/login/oauth/authorize?scope=user&client_id=*****************`;
 
   const signIn = async (githubCode: string) => {
     const response = await api.post<AuthResponse>("authenticate", {
